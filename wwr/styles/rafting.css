@@ -1,0 +1,221 @@
+/* ---------- CSS Variables ---------- */
+:root {
+  --primary-color: #4c1d95;
+  --accent-color: #2c5282;
+  --text-color: #1a202c;
+  --light-color: #ffffff;
+}
+
+/* ---------- Universal reset ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--accent-color);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header: CSS Grid (logo | nav) ---------- */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+/* ---------- Nav: CSS Flex ---------- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #2b6cb0;
+}
+
+/* ---------- Main container ---------- */
+main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ---------- Hero: overlay title + article on top of background image ---------- */
+.hero {
+  position: relative;
+  margin: 1.5rem 0;
+  min-height: 260px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.hero > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  color: var(--light-color);
+  background-color: rgba(76, 29, 149, 0.75);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.hero article img {
+  float: right;
+  width: 120px;
+  margin-left: 1rem;
+  border-radius: 4px;
+}
+
+/* ---------- History section: text + image ---------- */
+main > section:first-of-type {
+  padding: 2rem 0;
+}
+
+main > section:first-of-type h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+main > section:first-of-type img {
+  margin: 1rem auto 0;
+  max-width: 260px;
+  border-radius: 6px;
+}
+
+/* ---------- Adventures section ---------- */
+main > section:last-of-type {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.adventure-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.adventure-grid figure {
+  flex: 1 1 140px;
+}
+
+.adventure-grid img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.adventure-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer nav.socialmedia {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+footer nav.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero article img {
+    float: none;
+    margin: 0.5rem 0 0;
+    width: 100%;
+  }
+}
