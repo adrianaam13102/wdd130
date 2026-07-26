@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" fill="#bee3f8"/>
+  <path d="M0 140 Q75 110 150 140 T300 140 V200 H0 Z" fill="#4299e1"/>
+  <path d="M0 160 Q75 135 150 160 T300 160 V200 H0 Z" fill="#2b6cb0"/>
+  <circle cx="230" cy="50" r="25" fill="#fbd38d"/>
+  <text x="150" y="20" font-family="Arial" font-size="14" fill="#2a4365" text-anchor="middle">rafting scene placeholder</text>
+</svg>
